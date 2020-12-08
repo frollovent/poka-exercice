@@ -13,7 +13,7 @@ export class PlantsComponent implements OnInit {
 
   private results = this.moreResult;
 
-  private plants: any[] = [];
+  public plants: any[] = [];
 
   public allLoaded = false;
 
