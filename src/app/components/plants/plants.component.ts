@@ -7,16 +7,15 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./plants.component.scss']
 })
 export class PlantsComponent implements OnInit {
+  readonly moreResult = 10;
 
   private GET_URL = 'https://sg666zbdmf.execute-api.us-east-1.amazonaws.com/dev';
 
-  public data: any;
+  private results = this.moreResult;
 
-  public moreResult = 10;
+  private plants: any[] = [];
 
   public allLoaded = false;
-
-  public plants: any[] = [];
 
   constructor(private http: HttpClient) {
   }
@@ -33,11 +32,11 @@ export class PlantsComponent implements OnInit {
 
   getMorePlants() {
     this.http.get<any>(this.GET_URL + '?offset=' + this.moreResult).subscribe(data => {
-      if (this.moreResult <= 40) {
+      if (this.moreResult <= (data.count - this.moreResult)) {
         this.plants = this.plants.concat(data.results);
-        this.moreResult += 10;
+        this.results += this.moreResult;
 
-        if (this.moreResult === data.count) {
+        if (this.results === data.count) {
           this.allLoaded = true;
         }
       }
