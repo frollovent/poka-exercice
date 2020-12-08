@@ -1,0 +1,83 @@
+.plant {
+  &--out {
+    width: 13vw;
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 1vw;
+  }
+
+  &--in {
+    border-radius: 10px;
+    padding: 1vw;
+
+    background-color: white;
+    box-shadow: 0 0 4px #dcdcdc;
+
+    display: flex;
+    flex-direction: column;
+
+    /* ----- Three dots title ----- */
+
+    > * {
+      display: inline-block;
+      width: 10vw;
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+    }
+
+    span {
+      color: #505050;
+
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    p {
+      color: gray;
+
+      font-size: 13px;
+
+      margin: 5px 0;
+    }
+  }
+}
+
+/* ----- Tablet responsive (768px - 1024px) ----- */
+
+@media (max-width: 1024px) {
+  .plant {
+    &--out {
+      width: 20vw;
+    }
+
+    &--in {
+      padding: 2vw;
+
+      > * {
+        width: 17vw;
+      }
+    }
+  }
+}
+
+/* ----- mobile responsive (320px - 767px) ----- */
+
+@media (max-width: 767px) {
+  .plant {
+    &--out {
+      width: 80vw;
+    }
+
+    &--in {
+      padding: 5vw;
+
+      > * {
+        width: 77vw;
+      }
+    }
+  }
+}
+

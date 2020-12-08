@@ -1,0 +1,23 @@
+.plants {
+  &--container {
+    margin-top: 50px;
+    padding: 0 10vw;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &--list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.load-more {
+  margin: 50px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

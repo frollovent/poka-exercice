@@ -1,0 +1,11 @@
+<div class="plants--container">
+  <div class="plants--list">
+    <ng-container *ngFor="let plant of plants">
+      <poka-plant [plant]="plant"></poka-plant>
+    </ng-container>
+  </div>
+
+  <div class="load-more">
+    <button class="button--loadMore" *ngIf="!allLoaded" (click)="getMorePlants()">Plus de résultats</button>
+  </div>
+</div>

@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/button";
+@import "assets/scss/variables";
+
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f7f6fb;
+}
+

@@ -1,0 +1,30 @@
+@import "variables";
+
+.button {
+
+  &--loadMore {
+    cursor: pointer;
+
+    outline: none;
+
+    border: none;
+    border-radius: 7px;
+    padding: 15px 25px;
+
+    background-image: linear-gradient(to right, $primary, $secondary);
+    box-shadow: 5px 5px 2px #cfcfcf;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    &:hover {
+      background-image: linear-gradient(to right, $primary, $primary, $secondary);
+      box-shadow: none;
+
+      transition: 0.3s;
+    }
+  }
+}

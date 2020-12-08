@@ -1,0 +1,16 @@
+@import "../assets/scss/variables";
+
+header {
+  height: 70px;
+
+  padding: 0 20px;
+
+  background-image: linear-gradient(to right, $primary, $secondary);
+
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 25px;
+  }
+}
